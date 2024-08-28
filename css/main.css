@@ -641,7 +641,7 @@ strong {
   border-color: transparent;
 }
 
-.custom-form button[type="submit"] {
+.custom-form button[type="button"] {
   background: var(--custom-btn-bg-color);
   border: none;
   border-radius: var(--border-radius-large);
@@ -652,8 +652,8 @@ strong {
   margin-bottom: 0;
 }
 
-.custom-form button[type="submit"]:hover,
-.custom-form button[type="submit"]:focus {
+.custom-form button[type="button"]:hover,
+.custom-form button[type="button"]:focus {
   background: var(--custom-btn-bg-hover-color);
   border-color: transparent;
 }
@@ -925,6 +925,11 @@ body {
 
 .thumbnail-container img {
   margin-right: 10px;
+  width: 100px; /* Her bir thumbnail resminin genişliği */
+  height: 100px; /* Her bir thumbnail resminin yüksekliği */
+  object-fit: cover; /* Resmin container içine sığması için kırpma yapar */
+
+  display: block; /* Thumbnail resimlerinin düzenli sıralanmasını sağlar */
 }
 
 /* Responsive styles */
@@ -1015,3 +1020,82 @@ body {
   border: 0px solid black;
   border-top: none;
 }
+
+/* Center the carousel vertically */
+.carousel-item {
+
+  justify-content: center;
+  align-items: center;
+  height: 150%;
+}
+
+/* Responsive carousel images */
+.carousel-item img {
+  width: 100%;  /* Make images fill the container width */
+  max-width: 100%;  /* Ensure images don't overflow */
+  height: auto;  /* Automatically adjust height based on width */
+  max-height: 500px; /* Restrict the maximum height */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Thumbnails container: Align thumbnails to the left */
+.thumbnail-container {
+  display: flex;
+  justify-content: flex-start; /* Align thumbnails to the left */
+  gap: 1px; /* Optional: Add some space between thumbnails */
+}
+
+/* Increase and make thumbnail size responsive */
+.thumbnail-container img.img-thumbnail {
+  cursor: pointer;
+  width: 15vw; /* 15% of the viewport width */
+  max-width: 100px; /* Maximum width */
+  height: auto; /* Auto height to maintain aspect ratio */
+  object-fit: cover;
+}
+
+/* Remove scrollbar */
+.modal-body {
+  overflow-y: hidden;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .carousel-item img {
+    max-height: 300px; /* Smaller maximum height on small screens */
+  }
+
+  .thumbnail-container img.img-thumbnail {
+    width: 20vw; /* Larger percentage of the viewport on smaller screens */
+    max-width: 80px; /* Smaller maximum size on small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+    max-height: 200px; /* Even smaller maximum height on very small screens */
+  }
+
+  .thumbnail-container img.img-thumbnail {
+    width: 25vw; /* Larger percentage on very small screens */
+    max-width: 60px; /* Smaller maximum size on very small screens */
+  }
+}
+
+
+/* Customize the carousel control buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background */
+  border-radius: 40%; /* Make the background circular */
+}
+
+/* Optional: Change the arrow icons to white */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border-radius: 40%; /* Maintain the circular background */
+  width: 50px; /* Increase the size */
+  height: 50px;
+}
+
+
