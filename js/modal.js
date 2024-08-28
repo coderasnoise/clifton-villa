@@ -12,7 +12,7 @@ const rooms = {
     },
     room2: {
         title: "Family Room - Second Floor - En-suite Family Room (Room Only)",
-        image: "images/rooms/family1/1.jpg",
+        image: "images/rooms/family2/1.jpg",
         thumbnails: ["images/rooms/family2/1.jpg", "images/rooms/family2/2.jpg", "images/rooms/family2/3.jpg", "images/rooms/family2/4.jpg", "images/rooms/family2/5.jpg", "images/rooms/family2/6.jpg", "images/rooms/family2/7.jpg", "images/rooms/family2/8.jpg"],
         adults: 3,
         bedDetails: ["1 x Double Bed", "1 x Single Bed"],
@@ -87,18 +87,40 @@ const rooms = {
 function openModal(roomId) {
     const room = rooms[roomId];
     document.getElementById("roomTitle").innerText = room.title;
-    document.getElementById("roomImage").src = room.image;
 
+    const carouselImages = document.getElementById("carouselImages");
     const thumbnailContainer = document.getElementById("thumbnailContainer");
+
+    // Clear existing content
+    carouselImages.innerHTML = '';
     thumbnailContainer.innerHTML = '';
-    room.thumbnails.forEach(function (thumbnail) {
-        const img = document.createElement("img");
-        img.src = thumbnail;
-        img.className = "thumbnail";
-        img.onclick = function () {
-            document.getElementById("roomImage").src = thumbnail;
+
+    room.thumbnails.forEach((thumbnail, index) => {
+        // Carousel images
+        const carouselItem = document.createElement("div");
+        carouselItem.className = "carousel-item" + (index === 0 ? " active" : "");
+        carouselItem.innerHTML = `<img src="${thumbnail}" class="d-block w-100 img-fluid" alt="Room Image" style="object-fit: contain; height: 400px;">`;
+
+        // Add click event listener to make the clicked image active
+        carouselItem.onclick = () => {
+            const carouselElement = document.querySelector('#roomImageCarousel');
+            const carouselInstance = bootstrap.Carousel.getInstance(carouselElement);
+            carouselInstance.to(index);
         };
-        thumbnailContainer.appendChild(img);
+
+        carouselImages.appendChild(carouselItem);
+
+        // Thumbnails
+        const thumb = document.createElement("img");
+        thumb.src = thumbnail;
+        thumb.className = "img-thumbnail";
+        thumb.style = "cursor: pointer; width: 100px; height: 100px; object-fit: cover;";
+        thumb.onclick = () => {
+            const carouselElement = document.querySelector('#roomImageCarousel');
+            const carouselInstance = bootstrap.Carousel.getInstance(carouselElement);
+            carouselInstance.to(index);
+        };
+        thumbnailContainer.appendChild(thumb);
     });
 
     document.getElementById("roomAdults").innerHTML = '<i class="bi bi-people"></i> ' + room.adults;
@@ -106,7 +128,7 @@ function openModal(roomId) {
 
     const roomBeds = document.getElementById("roomBeds");
     roomBeds.innerHTML = '';
-    room.bedDetails.forEach(function (bedDetail) {
+    room.bedDetails.forEach((bedDetail) => {
         const li = document.createElement("li");
         li.innerText = bedDetail;
         roomBeds.appendChild(li);
@@ -116,7 +138,7 @@ function openModal(roomId) {
 
     const roomFacilities = document.getElementById("roomFacilities");
     roomFacilities.innerHTML = '';
-    room.facilities.forEach(function (facility) {
+    room.facilities.forEach((facility) => {
         const li = document.createElement("li");
         li.innerHTML = '<i class="bi bi-check-circle"></i> ' + facility;
         roomFacilities.appendChild(li);
@@ -124,7 +146,7 @@ function openModal(roomId) {
 
     const extraFacilities = document.getElementById("roomExtraFacilities");
     extraFacilities.innerHTML = '';
-    room.extraFacilities.forEach(function (facility) {
+    room.extraFacilities.forEach((facility) => {
         const li = document.createElement("li");
         li.innerHTML = '<i class="bi bi-check-circle"></i> ' + facility;
         extraFacilities.appendChild(li);
@@ -140,3 +162,9 @@ document.querySelectorAll('.openModalBtn').forEach(function (button) {
         openModal(roomId);
     };
 });
+
+
+function openInNewTab(url) {
+    window.open(url, '_blank');
+}
+
