@@ -21,12 +21,12 @@ const rooms = {
         extraFacilities: ["TV", "Linen", "Carpeted", "Flat-screen TV", "Electric kettle", "Heating", "Fan", "Towels", "Soundproofing", "Socket near the bed", "Tea/Coffee maker", "Clothes rack"]
     },
     room3: {
-        title: "Single Room - First Floor - En-suite Single Room (Room Only)",
+        title: "Economy Double Room - First Floor - En-suite Economy Double Room (Room Only)",
         image: "images/rooms/singleroom1/1.jpg",
         thumbnails: ["images/rooms/singleroom1/1.jpg", "images/rooms/singleroom1/2.jpg"],
-        adults: 1,
-        bedDetails: [ "1 x Single Bed"],
-        description: "The single room provides soundproof walls, a tea and coffee maker, as well as a private bathroom featuring a shower and a hairdryer. This single room features a carpeted floor, heating and a flat-screen TV. The unit offers 1 bed.",
+        adults: "Max 2",
+        bedDetails: [ "1 x Double Bed"],
+        description: "The economy double room provides soundproof walls, a tea and coffee maker, as well as a private bathroom featuring a shower and a hairdryer. This economy double room features a carpeted floor, heating and a flat-screen TV. The unit offers 1 bed.",
         facilities: ["Shower", "Toilet", "Hairdryer", "Toilet paper"],
         extraFacilities: ["TV", "Linen", "Carpeted", "Flat-screen TV", "Electric kettle", "Heating", "Fan", "Towels", "Soundproofing", "Socket near the bed", "Tea/Coffee maker", "Clothes rack"]
     },
@@ -61,22 +61,22 @@ const rooms = {
         extraFacilities: ["TV", "Linen", "Carpeted", "Flat-screen TV", "Electric kettle", "Heating", "Fan", "Towels", "Soundproofing", "Socket near the bed", "Tea/Coffee maker", "Clothes rack"]
     },
     room7: {
-        title: "Single Room - First Floor - En-suite Single Room (Room Only)",
+        title: "Economy Double Room - First Floor - En-suite Economy Double Room (Room Only)",
         image: "images/rooms/singleroom2/1.jpg",
         thumbnails: ["images/rooms/singleroom2/1.jpg", "images/rooms/singleroom2/2.jpg", "images/rooms/singleroom2/3.jpg", "images/rooms/singleroom2/4.jpg"],
-        adults: 1,
-        bedDetails: [ "1 x Single Bed"],
-        description: "The single room offers soundproof walls, a tea and coffee maker, as well as a private bathroom boasting a shower and a hairdryer. This single room has a carpeted floor, heating and a flat-screen TV. The unit has 1 bed.",
+        adults: "Max 2",
+        bedDetails: [ "1 x Double Bed"],
+        description: "The economy double room offers soundproof walls, a tea and coffee maker, as well as a private bathroom boasting a shower and a hairdryer. This economy double room has a carpeted floor, heating and a flat-screen TV. The unit has 1 bed.",
         facilities: ["Shower", "Toilet", "Hairdryer", "Toilet paper"],
         extraFacilities: ["TV", "Linen", "Carpeted", "Flat-screen TV", "Electric kettle", "Heating", "Fan", "Towels", "Soundproofing", "Socket near the bed", "Tea/Coffee maker", "Clothes rack"]
     },
     room8: {
-        title: "Single Room - Second Floor - En-suite Single Room (Room Only)",
+        title: "Economy Double Room - Second Floor - En-suite Economy Double Room (Room Only)",
         image: "images/rooms/singleroom3/1.jpg",
         thumbnails: ["images/rooms/singleroom3/1.jpg", "images/rooms/singleroom3/2.jpg", "images/rooms/singleroom3/3.jpg", "images/rooms/singleroom3/4.jpg"],
-        adults: 1,
-        bedDetails: [ "1 x Single Bed"],
-        description: "The single room provides soundproof walls, a tea and coffee maker, as well as a private bathroom featuring a shower and a hairdryer. The unit offers 1 bed.",
+        adults: "Max 2",
+        bedDetails: [ "1 x Double Bed"],
+        description: "The economy double room provides soundproof walls, a tea and coffee maker, as well as a private bathroom featuring a shower and a hairdryer. The unit offers 1 bed.",
         facilities: ["Shower", "Toilet", "Hairdryer", "Toilet paper"],
         extraFacilities: ["TV", "Linen", "Carpeted", "Flat-screen TV", "Electric kettle", "Heating", "Fan", "Towels", "Soundproofing", "Socket near the bed", "Tea/Coffee maker", "Clothes rack"]
     },
