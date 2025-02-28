@@ -1,12 +1,12 @@
 // Sample room data
 const rooms = {
     room1: {
-        title: "Family Room - Ground Floor - En-suite Family Room (Room Only)",
+        title: "Double (Or King) Room - Ground Floor - En-suite Double (Or King) Room (Room Only)",
         image: "images/rooms/family1/1.jpg",
         thumbnails: ["images/rooms/family1/1.jpg", "images/rooms/family1/2.jpg", "images/rooms/family1/3.jpg", "images/rooms/family1/4.jpg", "images/rooms/family1/5.jpg", "images/rooms/family1/6.jpg"],
-        adults: 3,
-        bedDetails: ["1 x Double Bed", "1 x Single Bed"],
-        description: "The family room offers soundproof walls, a tea and coffee maker, as well as a private bathroom featuring a shower and a hairdryer. This family room features a carpeted floor, heating and a flat-screen TV. The unit offers 2 beds.",
+        adults: "Max 2",
+        bedDetails: ["2 x Single Bed"],
+        description: "The Double (Or King) room offers soundproof walls, a tea and coffee maker, as well as a private bathroom featuring a shower and a hairdryer. This Double (Or King) room features a carpeted floor, heating and a flat-screen TV. The unit offers 2 beds.",
         facilities: ["Shower", "Toilet", "Hairdryer", "Toilet paper"],
         extraFacilities: ["TV", "Linen", "Carpeted", "Flat-screen TV", "Electric kettle", "Heating", "Fan", "Towels", "Soundproofing", "Socket near the bed", "Tea/Coffee maker", "Clothes rack"]
     },
